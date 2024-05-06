@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.iTunesLiveData.observe(this) {
             Log.i("ITUNES RESPONSE", it.toString())
-            Log.i("RESPONSE", it.results.toString())
 
         }
 
