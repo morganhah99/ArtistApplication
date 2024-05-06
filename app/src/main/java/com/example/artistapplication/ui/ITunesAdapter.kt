@@ -21,7 +21,8 @@ class ITunesAdapter(
                     .load(iTunesItemModel.artworkUrl60)
                     .placeholder(R.drawable.ic_launcher_foreground)
                     .into(ivCover)
-                tvTitle.text = iTunesItemModel.trackName
+                tvTrackName.text = iTunesItemModel.trackName
+                tvArtistName.text = iTunesItemModel.artistName
             }
         }
 
