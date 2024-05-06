@@ -1,6 +1,7 @@
 package com.example.artistapplication.network
 
 import com.example.artistapplication.model.ITunesResponseModel
+import com.example.artistapplication.model.ResultModel
 import retrofit2.Response
 import retrofit2.http.GET
 

@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.artistapplication.model.ITunesResponseModel
+import com.example.artistapplication.model.ResultModel
 import com.example.artistapplication.repository.ITunesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
