@@ -1,4 +1,4 @@
-package com.example.artistapplication
+package com.example.artistapplication.ui
 
 import android.os.Bundle
 import android.util.Log
