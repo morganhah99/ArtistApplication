@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.artistapplication.databinding.ActivityMainBinding
 import com.example.artistapplication.viewmodel.ITunesViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,6 +25,11 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.iTunesLiveData.observe(this) {
             Log.i("ITUNES RESPONSE", it.toString())
+
+            binding.rvITunesTracks.apply {
+                layoutManager = LinearLayoutManager(context)
+                adapter = ITunesAdapter(it)
+            }
 
         }
 
