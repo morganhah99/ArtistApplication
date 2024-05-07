@@ -1,5 +1,6 @@
 package com.example.artistapplication.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -14,6 +15,12 @@ import javax.inject.Inject
 class ITunesViewModel @Inject constructor(private val iTunesRepository: ITunesRepository): ViewModel() {
 
     val iTunesLiveData = MutableLiveData<List<ResultModel>>()
+
+    init {
+        iTunesLiveData.observeForever { results ->
+            Log.d("ITunesViewModel", "iTunesLiveData value: $results")
+        }
+    }
 
     fun fetchITunesResponse() {
         viewModelScope.launch (Dispatchers.IO) {
